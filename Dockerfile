@@ -2,7 +2,7 @@
 FROM php:8.2-apache
 
 # Copy app files into the container
-COPY . /var/www/html/ ./public
+COPY  /public /var/www/html/
 
 # Enable mod_rewrite for Laravel, etc. (optional)
 RUN a2enmod rewrite
