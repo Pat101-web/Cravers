@@ -1,0 +1,130 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    background: orange;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.site-header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background: grey;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+.title {
+    text-align: center;
+    color: orange;
+    margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.search-box input {
+    padding: 8px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-box button {
+    padding: 8px 15px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Food Cards */
+.food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.food-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.food-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.food-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: grey;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Cart */
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.btn.checkout {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background: orange;
+    padding: 10px;
+    border-radius: 5px;
+}
+
