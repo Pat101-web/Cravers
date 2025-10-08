@@ -9,10 +9,10 @@
 // }
 
 // Database connection
-$host = "138.201.204.31";
-$dbname = "craversi_ikfoods"; // CHANGE to your real DB name
-$user = "craversi_craver";      // XAMPP default
-$pass = "f94U~Bd8^1KOsA#z";          // XAMPP default
+$host = "localhost";
+$dbname = "ikfoods"; // CHANGE to your real DB name
+$user = "root";      // XAMPP default
+$pass = "";          // XAMPP default
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
