@@ -4,7 +4,7 @@
 
 // Redirect to login if not logged in
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'user') {
-    header("Location: login.php");
+   // header("Location: login.php");
     exit();
 }
 
