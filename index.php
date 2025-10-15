@@ -8,8 +8,8 @@
 //     exit();
 // }
 
-require_once '../env.php';
-loadEnv(dirname(__DIR__) . '\.env');
+require_once './env.php';
+loadEnv(__DIR__ . '\.env');
 
 // Database connection
 $host = getenv("DB_HOST");
