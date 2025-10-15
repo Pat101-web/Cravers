@@ -8,8 +8,8 @@
 //     exit();
 // }
 
-require_once '../env.php';
-loadEnv(dirname(__DIR__) . '\.env');
+require_once './env.php';
+loadEnv(__DIR__ . '\.env');
 
 // Database connection
 $host = getenv("DB_HOST");
@@ -135,10 +135,9 @@ $foods = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="menu">
             <?php if ($foods): ?>
                 <?php foreach ($foods as $food): 
-                    $imagePath = "uploads/" . htmlspecialchars($food['image']);
-                    echo $imagePath;
+                    $imagePath = "public/uploads/" . htmlspecialchars($food['image']);
                     if (!file_exists($imagePath) || !$food['image']) {
-                        $imagePath = "uploads/noimage.jpg"; // fallback
+                        $imagePath = "public/uploads/noimage.jpg"; // fallback
                     }
                 ?>
                     <div class="item" style="background-image: url('<?php echo $imagePath; ?>');">

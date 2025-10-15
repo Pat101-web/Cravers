@@ -1,11 +1,18 @@
-# Use the official PHP 8.2 image with Apache
+# Use official PHP + Apache image
 FROM php:8.2-apache
 
-# Copy app files into the container
-COPY  /public /var/www/html/
+# Install required PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql mysqli
 
-# Enable mod_rewrite for Laravel, etc. (optional)
+# Enable Apache mod_rewrite (optional)
 RUN a2enmod rewrite
+
+# Copy project files
+WORKDIR /var/www/html
+COPY . .
 
 # Expose port 80
 EXPOSE 80
+
+# Start Apache
+CMD ["apache2-foreground"]
