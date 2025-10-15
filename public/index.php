@@ -8,11 +8,16 @@
 //     exit();
 // }
 
+require_once '../env.php';
+loadEnv(dirname(__DIR__) . '\.env');
+
 // Database connection
-$host = "localhost";
-$dbname = "ikfoods"; // CHANGE to your real DB name
-$user = "root";      // XAMPP default
-$pass = "";          // XAMPP default
+$host = getenv("DB_HOST");
+$dbname = getenv("DB_NAME"); // CHANGE to your real DB name
+$user = getenv('DB_USER');      // XAMPP default
+$pass = getenv('DB_PASS');          // XAMPP default
+
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
@@ -102,6 +107,7 @@ $foods = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>

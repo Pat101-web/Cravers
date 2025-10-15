@@ -1,7 +1,21 @@
 services:
   - type: web
-    name: Cravers
-    env: php
-    buildCommand: ""
-    startCommand: "php -S 0.0.0.0:10000 -t public"
+    name: php-todo-app
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_HOST
+        fromService:
+          name: todo-mysql
+          type: pserv
+      - key: DB_NAME
+        value: todo_app
+      - key: DB_USER
+        value: root
+      - key: DB_PASS
+        value: yourpassword
+
+databases:
+  - name: todo-mysql
     plan: free
