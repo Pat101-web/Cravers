@@ -1,7 +1,7 @@
 
 <?php
-session_start();
-require_once '../config/db.php';
+//session_start();
+//require_once '../config/db.php';
 
 // Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
