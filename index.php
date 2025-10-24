@@ -114,7 +114,7 @@ $foods = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
                     <?php else: ?>
-                        <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="public/signup.php">Sign Up</a></li>
                     <?php endif; ?>
                     <li class="nav-item"><a class="nav-link" href="history.php">Transactions</a></li>
                     <li class="nav-item"><a class="nav-link" href="cart.php">Cart (<?php echo count($_SESSION['cart']); ?>)</a></li>
