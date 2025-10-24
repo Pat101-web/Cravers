@@ -1,0 +1,12 @@
+DB_HOST=127.0.0.1
+DB_NAME=ikfoods
+DB_USER=root
+DB_PASS=
+DB_PORT=3306
+
+
+# DB_HOST=131.153.147.162
+# DB_NAME=ibomidea_ikfoods
+# DB_USER=ibomidea_ikfoods_root
+# DB_PASS=Ct?E3(0%Od84XxKW
+# DB_PORT=3305
